@@ -1,0 +1,145 @@
+@import "./../../Variables.scss";
+
+.footer {
+    background: $main;
+    width: 100%;
+    position: relative;
+    padding-top: 4.25rem;
+
+    & .content {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        & .logo {
+            height: 226px;
+            min-width: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 15%;
+
+            & img {
+                width: 100%;
+                filter: brightness(10000%) saturate(0);
+            }
+        }
+
+        & .products {
+            width: 15%;
+            padding: 1rem 0.5rem;
+            min-width: 200px;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            & .product {
+                margin-left: 1rem;
+                color: $white;
+                font-weight: $bold;
+                font-size: 0.77rem;
+                line-height: 1.24;
+                text-transform: uppercase;
+            }
+        }
+
+        & .name {
+            color: $white;
+            font-size: 1.5rem;
+            font-weight: $normal;
+            margin-bottom: 1.48rem;
+        }
+
+        & .contacts {
+            width: 24%;
+            padding: 1rem;
+            min-width: 355px;
+
+            & .contact {
+                color: $white;
+                list-style: none;
+                margin-bottom: 1.07rem;
+
+                & svg {
+                    margin-right: 0.3rem;
+                }
+            }
+        }
+
+
+
+        & .socials {
+            width: 13%;
+            padding: 1rem;
+            min-width: 242px;
+            position: relative;
+
+            &List {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: 3rem;
+                list-style: none;
+
+                & .social {
+                    margin-right: 1rem;
+
+                    & a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    & .copyright {
+        text-align: center;
+        color: $white;
+        font-weight: $light;
+        font-size: 14px;
+        padding: 0 17px 17px 17px;
+        line-height: 21px;
+    }
+}
+
+@media (max-width: 466px) {
+    .footer {
+        text-align: center !important;
+
+        & .logo {
+            width: 50% !important;
+            height: unset !important;
+            margin-bottom: 1rem;
+        }
+
+        & .products {
+            align-items: center !important;
+            width: 100% !important;
+            margin-bottom: 1rem !important;
+            & .product {
+                font-size: 1rem !important;
+                line-height: 25px !important;
+            }
+        }
+
+        & .contacts {
+            width: 100% !important;
+        }
+
+        & .socials {
+            width: 100% !important;
+            &List {
+                justify-content: space-evenly !important;
+            }
+            & .social {
+                margin: unset !important;
+            }
+        }
+        & .name {
+            text-decoration: underline !important;
+        }
+    }
+}

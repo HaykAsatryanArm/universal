@@ -1,0 +1,141 @@
+@import "./../../Variables.scss";
+
+.row1 {
+    & .servicesImage {
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("./../../Assets/Img/Ellipse.svg");
+            width: 29vw;
+            height: 30.8vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: -6%;
+            bottom: -40%;
+            z-index: 4;
+            transform: rotate(28deg);
+        }
+    }
+}
+
+.row2 {
+    flex-flow: row-reverse;
+
+    & .servicesImage {
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("./../../Assets/Img/Ellipse.svg");
+            width: 29vw;
+            height: 30.8vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotate(90deg);
+            left: -6%;
+            bottom: -40%;
+            z-index: 4;
+        }
+    }
+}
+
+.row1,
+.row2 {
+    width: 100%;
+    height: calc(100vh - 4.875rem);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .services {
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+
+        &Content {
+            width: 48%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            &Text {
+                font-size: 1rem;
+                margin-bottom: 2.5rem;
+                font-weight: $normal;
+                color: $dark;
+                line-height: 19.2px;
+                margin-right: 1rem;
+            }
+        }
+
+        &Image {
+            position: relative;
+
+            & img {
+                position: relative;
+                z-index: 10;
+                width: 100%;
+            }
+        }
+
+        &Img {
+            width: 44%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .row1,
+    .row2 {
+        margin-bottom: 3rem;
+        height: unset !important;
+        flex-flow: column;
+    }
+
+    .services {
+        flex-flow: column;
+
+        &Content {
+            width: 100% !important;
+            text-align: center !important;
+            display: flex;
+            align-items: center !important;
+            margin: 1rem 0;
+        }
+
+        &Image {
+            margin-top: 1rem;
+            width: 100% !important;
+
+            &::before {
+                display: none;
+            }
+
+            & img {
+                width: 100% !important;
+                max-width: unset !important;
+            }
+        }
+
+        &Img {
+
+            width: 100% !important;
+
+            & img {
+                max-width: 25rem;
+                width: 85%;
+                border-radius: 8px;
+            }
+        }
+    }
+}

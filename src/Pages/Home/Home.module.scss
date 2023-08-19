@@ -1,0 +1,308 @@
+@import "./../../Variables.scss";
+
+.heading {
+    width: 100vw;
+    height: calc(100vh - 4.875rem);
+    position: relative;
+    background: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &Content {
+        width: 48%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        &Text {
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            font-weight: $normal;
+            color: $dark;
+            line-height: 19.2px;
+        }
+    }
+
+    &Img {
+        width: 44%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("./../../Assets/Img/Ellipse.svg");
+            width: 29vw;
+            height: 30.8vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: -30px;
+            bottom: 30px;
+
+        }
+
+        & img {
+            width: 100%;
+            z-index: 4;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        padding: 2rem 0 0 0;
+        flex-flow: column;
+
+        &Content {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        &Img {
+
+            width: 100%;
+
+            & img {
+                max-width: 25rem;
+                width: 85%;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.products {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    &List {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 44px;
+    }
+}
+
+
+
+.medical {
+    width: 100vw;
+    height: calc(100vh - 4.875rem);
+    position: relative;
+    background: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &Content {
+        width: 48%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        &Text {
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            font-weight: $normal;
+            color: $dark;
+            line-height: 19.2px;
+        }
+    }
+
+    &Img {
+        width: 44%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("./../../Assets/Img/Ellipse.svg");
+            transform: rotate(35deg);
+            width: 29vw;
+            height: 30.8vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: -30px;
+            bottom: 30px;
+
+        }
+
+        & img {
+            width: 100%;
+            z-index: 4;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .medical {
+        padding: 2rem 0 0 0;
+        flex-flow: column;
+
+        &Content {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        &Img {
+
+            width: 100%;
+
+            & img {
+                max-width: 25rem;
+                width: 85%;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+section {
+    padding: 3rem 0;
+}
+
+.coWorkers {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    & .list {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+
+        & img {
+            max-width: 392px;
+            width: 100%;
+        }
+    }
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+
+    &Info {
+        width: 45%;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("./../../Assets/Img/Ellipse.svg");
+            transform: rotate(80deg);
+            width: 316px;
+            height: 340px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -65px;
+            bottom: -130px;
+
+        }
+    }
+
+    &Text {
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: $normal;
+        color: $dark;
+        margin-bottom: 80px;
+    }
+
+    &Forms {
+        width: 45%;
+        position: relative;
+
+        & .form {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+
+            & input,
+            & textarea {
+                resize: vertical;
+                width: 100%;
+                padding: 35px 50px;
+                background: $grey;
+                border-radius: 14px;
+                overflow: hidden;
+                margin: 22.5px 0;
+                outline: none;
+                border: none;
+                color: $dark;
+                font-weight: $bold;
+                font-size: 18px;
+                line-height: 20px;
+
+
+                &::placeholder {
+                    color: #19284199;
+
+                }
+            }
+
+            & textarea {
+                height: 200px;
+            }
+        }
+    }
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        flex-flow: column-reverse;
+
+        &Info {
+            width: 100%;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &Text {
+            margin-bottom: 2rem;
+        }
+
+        &Forms {
+            width: 100%;
+            margin-bottom: 3rem;
+
+            & input,
+            & textarea {
+                padding: 25px 40px !important;
+                margin: 0 0 30px 0 !important;
+                font-size: 15px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+@import "./../../Variables.scss";
+
+
+.contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+
+    &Info {
+        width: 45%;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("./../../Assets/Img/Ellipse.svg");
+            transform: rotate(80deg);
+            width: 316px;
+            height: 340px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -65px;
+            bottom: -130px;
+
+        }
+    }
+
+    &Text {
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: $normal;
+        color: $dark;
+        margin-bottom: 80px;
+    }
+
+    &Forms {
+        width: 45%;
+        position: relative;
+
+        & .form {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+
+            & input,
+            & textarea {
+                resize: vertical;
+                width: 100%;
+                padding: 35px 50px;
+                background: $grey;
+                border-radius: 14px;
+                overflow: hidden;
+                margin: 22.5px 0;
+                outline: none;
+                border: none;
+                color: $dark;
+                font-weight: $bold;
+                font-size: 18px;
+                line-height: 20px;
+
+
+                &::placeholder {
+                    color: #19284199;
+
+                }
+            }
+
+            & textarea {
+                height: 200px;
+            }
+        }
+    }
+
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        flex-flow: column-reverse;
+
+        &Info {
+            width: 100%;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &Text {
+            margin-bottom: 2rem;
+        }
+
+        &Forms {
+            width: 100%;
+            margin-bottom: 3rem;
+
+            & input,
+            & textarea {
+                padding: 25px 40px !important;
+                margin: 0 0 30px 0 !important;
+                font-size: 15px !important;
+            }
+        }
+    }
+}

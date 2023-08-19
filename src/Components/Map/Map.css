@@ -1,0 +1,11 @@
+.gmnoprint {
+    display: none;
+}
+
+.gm-control-active, .gm-fullscreen-control {
+    display: none;
+}
+
+a[aria-label="Open this area in Google Maps (opens a new window)"] {
+    display: none !important;
+}
