@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { Routes, Route } from "react-router-dom"
 
@@ -13,13 +13,19 @@ const App = () => {
 
     const [status, setStatus] = useState(false)
 
+    const [burger, setBurger] = useState(false)
+
+    useEffect(() => {
+        setBurger(false)
+    }, [activePage])
+
 
     const [popup, setPopup] = useState(null)
     const [formPopup, setFormPopup] = useState(null)
 
     return (
         <div className={popup || formPopup ? "grandComponent" : ""}>
-            <Header active={activePage} setActive={setActivepage} />
+            <Header active={activePage} burger={burger} setBurger={setBurger} setActive={setActivepage} />
 
 
 
@@ -32,13 +38,13 @@ const App = () => {
 
             
             <Routes>
-                <Route path={"universal/"} element={<Home setActive={setActivepage} popup={popup} setPopup={setPopup} setStatus={setStatus} />} />
-                <Route path={"universal/about"} element={<About setActive={setActivepage} />} />
-                <Route path={"universal/product"} element={<Product setActive={setActivepage} />} />
-                <Route path={"universal/product/:id"} element={<SelectedProduct setActive={setActivepage} />} />
-                <Route path={"universal/services"} element={<Services setActive={setActivepage} setFormPopup={setFormPopup}  />} />
-                <Route path={"universal/co-workers"} element={<CoWorkers setActive={setActivepage} />} />
-                <Route path={"universal/contact"} element={<Contact setActive={setActivepage} setStatus={setStatus} setPopup={setPopup} />} />
+                <Route path={"/universal/"} element={<Home setActive={setActivepage} popup={popup} setPopup={setPopup} setStatus={setStatus} />} />
+                <Route path={"/universal/about"} element={<About setActive={setActivepage} />} />
+                <Route path={"/universal/product"} element={<Product setActive={setActivepage} />} />
+                <Route path={"/universal/product/:id"} element={<SelectedProduct setActive={setActivepage} />} />
+                <Route path={"/universal/services"} element={<Services setActive={setActivepage} setFormPopup={setFormPopup}  />} />
+                <Route path={"/universal/co-workers"} element={<CoWorkers setActive={setActivepage} />} />
+                <Route path={"/universal/contact"} element={<Contact setActive={setActivepage} setStatus={setStatus} setPopup={setPopup} />} />
             </Routes>
             <Footer />
         </div>

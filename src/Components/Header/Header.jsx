@@ -8,34 +8,34 @@ import menu from "./../../Assets/Img/Header/menu.svg"
 
 import arm from "./../../Assets/Img/Header/langs/arm.svg"
 
-const Header = ({ active, setActive }) => {
+const Header = ({ active, setActive, burger, setBurger }) => {
 
-    const [burger, setBurger] = useState(false)
+    
 
     const nav = [
         {
             name: "գլխավոր",
-            to: "/"
+            to: "/universal/"
         },
         {
             name: "մեր մասին",
-            to: "/about"
+            to: "/universal/about"
         },
         {
             name: "արտադրանք",
-            to: "/product"
+            to: "/universal/product"
         },
         {
             name: "ծառայություններ",
-            to: "/services"
+            to: "/universal/services"
         },
         {
             name: "գործընկերներ",
-            to: "/co-workers"
+            to: "/universal/co-workers"
         },
         {
             name: "հետադարձ կապ",
-            to: "/contact"
+            to: "/universal/contact"
         },
     ]
 
@@ -54,7 +54,7 @@ const Header = ({ active, setActive }) => {
                     <ul className={`${styles.navLinks} ${burger ? styles.active : ''}`}>
                         {
                             nav.map((link, idx) => {
-                                return <Link className={`${styles.navLinksLink} ${active === link.name ? styles.active : ""}`} key={idx} to={`/universal/${link.to}`} onClick={() => {
+                                return <Link className={`${styles.navLinksLink} ${active === link.name ? styles.active : ""}`} key={idx} to={link.to} onClick={() => {
                                     setActive(link.name)
                                 }}>{link.name}</Link>
                             })
