@@ -10,7 +10,7 @@ const Services = ({ setActive, setFormPopup }) => {
     
     useEffect(() => {
         setActive("ծառայություններ")
-    }, [])
+    }, [setActive])
 
 
     return (

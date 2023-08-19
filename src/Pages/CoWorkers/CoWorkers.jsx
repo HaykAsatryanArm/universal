@@ -10,7 +10,7 @@ const CoWorkers = ({ setActive }) => {
 
     useEffect(() => {
         setActive("գործընկերներ")
-    }, [])
+    }, [setActive])
 
     const coWorkers = [
         vagaPharm, vagaPharm, vagaPharm, vagaPharm, vagaPharm, vagaPharm

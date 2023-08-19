@@ -21,7 +21,7 @@ const Button = ({ type, to, children: text, setPopup, setSelected, product }) =>
                     {text}
                 </button>
                 :
-                <Link className={styles.button} to={to}>
+                <Link className={styles.button} to={`/universal${to}`}>
                     {text}
                 </Link>
 

@@ -32,13 +32,13 @@ const App = () => {
 
             
             <Routes>
-                <Route path={"/"} element={<Home setActive={setActivepage} popup={popup} setPopup={setPopup} setStatus={setStatus} />} />
-                <Route path={"/about"} element={<About setActive={setActivepage} />} />
-                <Route path={"/product"} element={<Product setActive={setActivepage} />} />
-                <Route path={"/product/:id"} element={<SelectedProduct setActive={setActivepage} />} />
-                <Route path={"/services"} element={<Services setActive={setActivepage} setFormPopup={setFormPopup}  />} />
-                <Route path={"/co-workers"} element={<CoWorkers setActive={setActivepage} />} />
-                <Route path={"/contact"} element={<Contact setActive={setActivepage} setStatus={setStatus} setPopup={setPopup} />} />
+                <Route path={"universal/"} element={<Home setActive={setActivepage} popup={popup} setPopup={setPopup} setStatus={setStatus} />} />
+                <Route path={"universal/about"} element={<About setActive={setActivepage} />} />
+                <Route path={"universal/product"} element={<Product setActive={setActivepage} />} />
+                <Route path={"universal/product/:id"} element={<SelectedProduct setActive={setActivepage} />} />
+                <Route path={"universal/services"} element={<Services setActive={setActivepage} setFormPopup={setFormPopup}  />} />
+                <Route path={"universal/co-workers"} element={<CoWorkers setActive={setActivepage} />} />
+                <Route path={"universal/contact"} element={<Contact setActive={setActivepage} setStatus={setStatus} setPopup={setPopup} />} />
             </Routes>
             <Footer />
         </div>

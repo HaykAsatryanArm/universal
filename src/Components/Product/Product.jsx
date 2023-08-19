@@ -9,7 +9,7 @@ import { AiOutlineColumnHeight as Height, AiOutlineColumnWidth as Width } from '
 import layers from './../../Assets/Img/Home/Layers.svg'
 import count from './../../Assets/Img/Home/Count.svg'
 
-const Product = ({ setSelected, product, onlySizes }) => {
+const Product = ({ product, onlySizes }) => {
 
     return (
         <div className={styles.product}>

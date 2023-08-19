@@ -8,7 +8,7 @@ const Contact = ({ setActive, setStatus, setPopup }) => {
 
     useEffect(() => {
         setActive("հետադարձ կապ")
-    }, [])
+    }, [setActive])
 
     const [formData, setFormData] = useState({
         name: '',

@@ -13,7 +13,7 @@ const About = ({ setActive }) => {
     useEffect(() => {
         setActive("մեր մասին")
 
-    }, [])
+    }, [setActive])
 
     return (
         <section className={styles.about}>

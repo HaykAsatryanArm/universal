@@ -10,9 +10,8 @@ const Products = ({ setActive }) => {
 
     useEffect(() => {
         setActive("արտադրանք")
-    }, [])
+    }, [setActive])
 
-    const [selected, setSelected] = useState(null)
 
     const [category, setCategory] = useState("bint")
 
@@ -50,7 +49,7 @@ const Products = ({ setActive }) => {
                 <div className={styles.productsList}>
                     {
                         products.map((product, index) => {
-                            return category === product.category ? <Product setSelected={setSelected} onlySizes={product.category !== "napkin"} product={product} key={index} /> : ''
+                            return category === product.category ? <Product onlySizes={product.category !== "napkin"} product={product} key={index} /> : ''
                         })
                     }
                 </div>

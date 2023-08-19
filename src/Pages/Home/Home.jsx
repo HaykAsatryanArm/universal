@@ -16,7 +16,7 @@ const Home = ({ setActive, setPopup, setStatus }) => {
 
     useEffect(() => {
         setActive("գլխավոր")
-    }, [])
+    }, [setActive])
 
 
     const products = [
