@@ -10,7 +10,7 @@ const Map = () => {
     const center = useMemo(() => ({ lat: 40.182350158691406, lng: 44.56821823120117 }))
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyBxFnPQRPd7ZH150cBomremSb0kOemQbBg"
+        googleMapsApiKey: ""
     })
 
     return isLoaded ? <GoogleMap zoom={16.8} center={center} mapContainerClassName={styles.map}>

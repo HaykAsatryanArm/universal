@@ -68,7 +68,7 @@ const Product = ({ product, onlySizes }) => {
                 }
 
             </div>
-            <Link to={`/product/${product.id}`} className={styles.button}>
+            <Link to={`/universal/product/${product.id}`} className={styles.button}>
                 ՏԵՍՆԵԼ Ավելին
             </Link>
         </div>
