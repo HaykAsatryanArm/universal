@@ -54,7 +54,7 @@ const Header = ({ active, setActive }) => {
                     <ul className={`${styles.navLinks} ${burger ? styles.active : ''}`}>
                         {
                             nav.map((link, idx) => {
-                                return <Link className={`${styles.navLinksLink} ${active === link.name ? styles.active : ""}`} key={idx} to={link.to} onClick={() => {
+                                return <Link className={`${styles.navLinksLink} ${active === link.name ? styles.active : ""}`} key={idx} to={`/universal/${link.to}`} onClick={() => {
                                     setActive(link.name)
                                 }}>{link.name}</Link>
                             })
